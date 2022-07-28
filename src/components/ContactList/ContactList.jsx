@@ -1,19 +1,11 @@
 import PropTypes from 'prop-types';
 import { ContactItem } from 'components';
 
-export const ContactList = ({ contacts, onDelete }) => {
+export const ContactList = ({ contacts }) => {
   return (
     <ul>
       {contacts.map(({ name, number, id }) => {
-        return (
-          <ContactItem
-            key={id}
-            id={id}
-            onDelete={onDelete}
-            name={name}
-            number={number}
-          />
-        );
+        return <ContactItem key={id} id={id} name={name} number={number} />;
       })}
     </ul>
   );

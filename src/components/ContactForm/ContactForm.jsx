@@ -1,16 +1,24 @@
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import * as contactsActions from 'redux/contacts/contactsActions';
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Label, SubmitBtn, FormikForm, Input } from './contactForm.styled';
 
-export const ContactForm = ({ onSubmit }) => {
+export const ContactForm = () => {
+  const dispatch = useDispatch();
+  const contacts = useSelector(state => state.contactReducer);
   const initialValues = {
     name: '',
     number: '',
   };
 
-  const handleSubmit = (values, { resetForm }) => {
-    onSubmit(values);
+  const handleSubmit = ({ name, number }, { resetForm }) => {
+    if (contacts.find(el => el.name === name)) {
+      return alert(`${name} is already in contacts`);
+    }
+    dispatch(contactsActions.addContact(name, number));
+
     resetForm();
   };
 
