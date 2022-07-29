@@ -6,7 +6,7 @@ import { Label, SubmitBtn, FormikForm, Input } from './contactForm.styled';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.item);
   const initialValues = {
     name: '',
     number: '',
