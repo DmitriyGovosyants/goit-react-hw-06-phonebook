@@ -57,9 +57,7 @@ export const ApprovalBtn = styled.button`
   border-radius: 10px;
   outline: none;
   
-  :focus {
-    box-shadow: ${p => p.theme.shadow.formFocusShadow};
-  }
+  :focus,
   :hover {
     background-color: ${p => p.theme.colors.btnBgcAccent};
   }

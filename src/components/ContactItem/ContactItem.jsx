@@ -31,7 +31,11 @@ export const ContactItem = ({ name, number, id }) => {
             Do you really want to delete this contact?
           </ApprovalText>
           <ApprovalBtnWrapper>
-            <ApprovalBtn type="button" onClick={() => setShowModal(s => !s)}>
+            <ApprovalBtn
+              type="button"
+              autoFocus
+              onClick={() => setShowModal(s => !s)}
+            >
               NO
             </ApprovalBtn>
             <ApprovalBtn
