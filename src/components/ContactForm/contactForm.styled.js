@@ -8,8 +8,8 @@ export const FormikForm = styled(Form)`
   margin-bottom: ${p => p.theme.spacing(10)};
   padding: ${p => p.theme.spacing(2)};
 
+  background-color: ${p => p.theme.colors.secondBgc};
   border-radius: 20px;
-  border: 3px dashed green;
 `
 
 export const Label = styled.label`

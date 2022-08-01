@@ -30,10 +30,37 @@ export const DeleteBtn = styled.button`
   border: none;
   outline: none;
 
-  :hover {
+  :hover,
+  :focus {
     color: ${p => p.theme.colors.btnBgcAccent};
   }
+`
+
+export const ApprovalText = styled.p`
+  margin-bottom: ${p => p.theme.spacing(5)};
+  font-size: 20px;
+`
+
+export const ApprovalBtnWrapper = styled.div`
+ display: flex;
+ justify-content: center;
+`
+
+export const ApprovalBtn = styled.button`
+  padding: ${p => p.theme.spacing(2)};
+  margin-right: ${p => p.lastEl === 'last' ? '0' : '20px'};
+
+  font-weight: 700;
+  color: ${p => p.theme.colors.textColorMain};
+
+  background-color: ${p => p.theme.colors.btnBgc};
+  border-radius: 10px;
+  outline: none;
+  
   :focus {
     box-shadow: ${p => p.theme.shadow.formFocusShadow};
+  }
+  :hover {
+    background-color: ${p => p.theme.colors.btnBgcAccent};
   }
 `
