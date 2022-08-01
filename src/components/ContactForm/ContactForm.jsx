@@ -6,14 +6,15 @@ import { Label, SubmitBtn, FormikForm, Input } from './contactForm.styled';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.item);
+  const items = useSelector(({ contacts }) => contacts.items);
+
   const initialValues = {
     name: '',
     number: '',
   };
 
   const handleSubmit = ({ name, number }, { resetForm }) => {
-    if (contacts.find(el => el.name === name)) {
+    if (items.find(el => el.name === name)) {
       return alert(`${name} is already in contacts`);
     }
     dispatch(contactsActions.addContact(name, number));

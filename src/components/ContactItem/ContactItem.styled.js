@@ -23,17 +23,15 @@ export const Info = styled.p`
 
 export const DeleteBtn = styled.button`
   margin-left: ${p => p.theme.spacing(2)};
-  padding: ${p => p.theme.spacing(2)};
 
   font-size: ${p => p.theme.fontSizes.small};
-  color: ${p => p.theme.colors.textColorMain};
-  background-color: ${p => p.theme.colors.btnBgc};
+  color: ${p => p.theme.colors.btnBgc};
   border-radius: 10px;
   border: none;
   outline: none;
 
   :hover {
-    background-color: ${p => p.theme.colors.btnBgcAccent};
+    color: ${p => p.theme.colors.btnBgcAccent};
   }
   :focus {
     box-shadow: ${p => p.theme.shadow.formFocusShadow};

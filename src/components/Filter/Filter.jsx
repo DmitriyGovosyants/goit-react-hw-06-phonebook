@@ -4,7 +4,7 @@ import { FilterContainer, Label, Input } from './Filter.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.contacts.filter);
+  const filter = useSelector(({ contacts }) => contacts.filter);
 
   return (
     <FilterContainer>

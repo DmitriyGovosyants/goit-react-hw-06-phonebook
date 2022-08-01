@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux';
 import { ContactItem } from 'components';
 
 export const ContactList = () => {
-  const contacts = useSelector(state => state.contacts.item);
-  const filter = useSelector(state => state.contacts.filter.toLowerCase());
+  const items = useSelector(({ contacts }) => contacts.items);
+  const filter = useSelector(({ contacts }) => contacts.filter.toLowerCase());
 
-  const filterContacts = contacts.filter(contact =>
+  const filterContacts = items.filter(contact =>
     contact.name.toLowerCase().includes(filter)
   );
 
