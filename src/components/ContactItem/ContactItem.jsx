@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import { RiDeleteBack2Line } from 'react-icons/ri';
+import { BiUser } from 'react-icons/bi';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as contactsActions from 'redux/contacts/contactsActions';
 import {
   Contact,
   Info,
+  InfoText,
   DeleteBtn,
   ApprovalText,
   ApprovalBtnWrapper,
@@ -20,7 +22,10 @@ export const ContactItem = ({ name, number, id }) => {
   return (
     <Contact>
       <Info>
-        {name}: {number}
+        <BiUser size={20} style={{ flex: '0 0 20px' }} />
+        <InfoText>
+          {name}: {number}
+        </InfoText>
       </Info>
       <DeleteBtn type="button" onClick={() => setShowModal(s => !s)}>
         <RiDeleteBack2Line size={30} />

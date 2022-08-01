@@ -16,7 +16,12 @@ export const Contact = styled.li`
   }
 `
 
-export const Info = styled.p`
+export const Info = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const InfoText = styled.p`
   padding: ${p => p.theme.spacing(2)};
   font-size: ${p => p.theme.fontSizes.medium};
 `
