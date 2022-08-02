@@ -53,7 +53,7 @@ export const ApprovalBtnWrapper = styled.div`
 
 export const ApprovalBtn = styled.button`
   padding: ${p => p.theme.spacing(2)};
-  margin-right: ${p => p.lastEl === 'last' ? '0' : '20px'};
+  margin-right: ${p => p.lastEl ? '0' : '20px'};
 
   font-weight: 700;
   color: ${p => p.theme.colors.textColorMain};

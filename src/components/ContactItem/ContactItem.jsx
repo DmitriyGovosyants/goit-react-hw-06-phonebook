@@ -46,7 +46,7 @@ export const ContactItem = ({ name, number, id }) => {
             <ApprovalBtn
               type="button"
               onClick={() => dispatch(contactsActions.deleteContact(id))}
-              lastEl={'last'}
+              lastEl={true}
             >
               YES
             </ApprovalBtn>
